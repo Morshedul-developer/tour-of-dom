@@ -21,10 +21,27 @@
         omnis.
       </p>
 
+      <ul>
+        <li>Hello</li>
+        <li>He</li>
+        <li>Hi</li>
+        <li>Him</li>
+        <li>This</li>
+      </ul>
+
+      <!-- <script src="./js/script.js"></script> -->
+
       <script>
-        console.log("Hi.....");
+        // console.log("Hi.....");
+
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+
+        for(const li of liCollection) {
+            console.log(li.innerText);
+            // console.log(li.innerHTML);
+        }
       </script>
-      <script src="./js/script.js"></script>
     </body>
   </body>
 </html>
