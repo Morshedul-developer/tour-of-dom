@@ -12,7 +12,7 @@
       </header>
     </header>
     <body>
-      <h2>DOM for Document Object Model</h2>
+      <h2 id="dom">DOM for Document Object Model</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod id ea
         omnis facere atque quaerat nobis quasi? Laudantium eos in excepturi
@@ -24,23 +24,61 @@
       <ul>
         <li>Hello</li>
         <li>He</li>
-        <li>Hi</li>
-        <li>Him</li>
-        <li>This</li>
+        <li class="hi">Hi</li>
+        <li class="hi">Him</li>
+        <li class="hi">This</li>
       </ul>
+
+      <section class="data-list">
+        <h3>Student list :</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem optio
+          enim, dolorem aperiam id sunt perspiciatis harum soluta impedit quos?
+        </p>
+        <ul>
+          <li>Hello</li>
+          <li>He</li>
+          <li>Hi</li>
+          <li>Him</li>
+          <li class="this">This</li>
+        </ul>
+      </section>
 
       <!-- <script src="./js/script.js"></script> -->
 
       <script>
         // console.log("Hi.....");
 
-        const liCollection = document.getElementsByTagName('li');
+        const liCollection = document.getElementsByTagName("li");
         // console.log(liCollection);
 
-        for(const li of liCollection) {
-            console.log(li.innerText);
-            // console.log(li.innerHTML);
+        for (const li of liCollection) {
+          // console.log(li.innerText);
+          // console.log(li.innerHTML);
         }
+
+        const h1 = document.getElementById("dom");
+        // console.log(h1.innerText);
+
+        const pTag = document.getElementsByClassName("hi");
+
+        for (const p of pTag) {
+        //   console.log(p.innerText);
+        }
+
+        const dataList = document.querySelectorAll('.data-list h3');
+        for(const data of dataList) {
+            // console.log(data.innerText);
+        }
+
+        const items = document.querySelectorAll('.data-list .this');
+        for(const item of items) {
+            // console.log(item.innerText);
+        }
+
+        const li = document.querySelector('.data-list li');
+        console.log(li.innerText);
+        
       </script>
     </body>
   </body>
