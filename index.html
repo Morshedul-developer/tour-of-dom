@@ -4,11 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document Object Model</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+        .font{
+            font-size: 7em;
+        }
+    </style>
   </head>
   <body>
     <header>
       <header>
-        <h1>Hello</h1>
+        <h1 id="hello">Hello</h1>
       </header>
     </header>
     <body>
@@ -77,8 +85,18 @@
         }
 
         const li = document.querySelector('.data-list li');
-        console.log(li.innerText);
-        
+        // console.log(li.innerText);
+
+        const hello = document.getElementById('hello');
+        // console.log(hello.innerText);
+        // hello.style.backgroundColor = 'green';
+        hello.classList.add('font', 'red');
+        hello.classList.remove('font');
+
+        console.log(hello.getAttribute('id'));
+        console.log(hello.getAttribute('class'));
+        console.log(hello.setAttribute('title', 'Hi guys...........'));
+
       </script>
     </body>
   </body>
